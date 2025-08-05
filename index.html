@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>하은 & 지석의 결혼식</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+  <!-- 고정 네비게이션 -->
+  <nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#info">Info</a>
+    <a href="#map">Map</a>
+    <a href="#account">Account</a>
+  </nav>
+
+  <!-- 커버 -->
+  <section class="hero" id="home" data-aos="fade-up">
+    <div class="hero-content">
+      <h1>하은 & 지석</h1>
+      <p class="date">2025.11.24 | 서울</p>
+      <div class="scroll-down">▼</div>
+    </div>
+  </section>
+
+  <!-- 인사말 -->
+  <section class="greeting" data-aos="fade-up">
+    <p>저희 두 사람,<br>사랑으로 하나 되어<br>함께하는 첫 걸음을 내딛습니다.<br>
+    소중한 날에 함께해 주신다면 더 큰 기쁨이 될 것입니다.</p>
+  </section>
+
+  <!-- 신랑신부 및 부모님 -->
+  <section class="couple" data-aos="fade-up">
+    <div class="person groom">
+      <h2>신랑 지석</h2>
+      <p class="parents">김○○ · 이○○의 아들</p>
+    </div>
+    <div class="person bride">
+      <h2>신부 하은</h2>
+      <p class="parents">박○○ · 최○○의 딸</p>
+    </div>
+  </section>
+
+  <!-- 갤러리 -->
+  <section class="gallery" id="gallery" data-aos="fade-up">
+    <h2>갤러리</h2>
+    <div class="gallery-grid">
+      <!-- 20장 샘플 이미지 -->
+      <img src="https://picsum.photos/400/500?random=1" alt="">
+      <img src="https://picsum.photos/400/500?random=2" alt="">
+      <img src="https://picsum.photos/400/500?random=3" alt="">
+      <img src="https://picsum.photos/400/500?random=4" alt="">
+      <img src="https://picsum.photos/400/500?random=5" alt="">
+      <img src="https://picsum.photos/400/500?random=6" alt="">
+      <img src="https://picsum.photos/400/500?random=7" alt="">
+      <img src="https://picsum.photos/400/500?random=8" alt="">
+      <img src="https://picsum.photos/400/500?random=9" alt="">
+      <img src="https://picsum.photos/400/500?random=10" alt="">
+      <img src="https://picsum.photos/400/500?random=11" alt="">
+      <img src="https://picsum.photos/400/500?random=12" alt="">
+      <img src="https://picsum.photos/400/500?random=13" alt="">
+      <img src="https://picsum.photos/400/500?random=14" alt="">
+      <img src="https://picsum.photos/400/500?random=15" alt="">
+      <img src="https://picsum.photos/400/500?random=16" alt="">
+      <img src="https://picsum.photos/400/500?random=17" alt="">
+      <img src="https://picsum.photos/400/500?random=18" alt="">
+      <img src="https://picsum.photos/400/500?random=19" alt="">
+      <img src="https://picsum.photos/400/500?random=20" alt="">
+    </div>
+  </section>
+
+  <!-- 웨딩 안내 -->
+  <section class="info" id="info" data-aos="fade-up">
+    <h2>웨딩 안내</h2>
+    <p>2025년 11월 24일 오후 2시<br>서울 ○○웨딩홀</p>
+  </section>
+
+  <!-- 지도 -->
+  <section class="map" id="map" data-aos="fade-up">
+    <h2>오시는 길</h2>
+    <div class="map-tabs">
+      <button onclick="showMap('kakao')">카카오맵</button>
+      <button onclick="showMap('naver')">네이버맵</button>
+    </div>
+    <div class="map-container">
+      <iframe id="kakao-map" src="https://map.kakao.com/?q=서울시청" width="100%" height="300" style="border:0;" allowfullscreen></iframe>
+      <iframe id="naver-map" src="https://map.naver.com/v5/search/서울시청" width="100%" height="300" style="border:0; display:none;" allowfullscreen></iframe>
+    </div>
+    <div class="map-buttons">
+      <a href="kakaomap://look?p=37.5665,126.9780" class="btn">카카오맵 앱으로 열기</a>
+      <a href="nmap://place?lat=37.5665&lng=126.9780" class="btn">네이버맵 앱으로 열기</a>
+    </div>
+  </section>
+
+  <!-- 계좌번호 -->
+  <section class="account" id="account" data-aos="fade-up">
+    <h2>마음 전하실 곳</h2>
+    <div class="account-section">
+      <h3>신랑측</h3>
+      <p>국민은행 123456-78-901234</p>
+      <button onclick="copyAccount('국민은행 123456-78-901234')">복사하기</button>
+    </div>
+    <div class="account-section">
+      <h3>신부측</h3>
+      <p>신한은행 987654-32-109876</p>
+      <button onclick="copyAccount('신한은행 987654-32-109876')">복사하기</button>
+    </div>
+  </section>
+
+  <!-- 토스트 메시지 -->
+  <div id="toast">복사되었습니다</div>
+
+  <!-- 푸터 -->
+  <footer>
+    <p>made with <span class="logo">eternal love</span></p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+</html>
